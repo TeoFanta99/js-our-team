@@ -16,13 +16,40 @@ Stampare le stesse informazioni su DOM sotto forma di stringhe
 // GENERARE un array di oggetti con le informazioni dei membri del team con nome, ruolo, foto
 const newArray = [
 
-    
-
-
-
-
+    {
+        "nome" : "Wayne Barnett",
+        "ruolo" : "Founder & CEO",
+        "foto" : "foto di Wayne Barnett",
+    },
+    {
+        "nome" : "Angela Caroll",
+        "ruolo" : "Chief Editor",
+        "foto" : "foto di Angela Caroll"
+    },
+    {
+        "nome" : "Walter Gordon",
+        "ruolo" : "Office Manager",
+        "foto" : "foto di Walter Gordon"
+    },
+    {
+        "nome" : "Angela Lopez",
+        "ruolo" : "Social Media Manager",
+        "foto" : "foto di Angela Lopez",
+    },
+    {
+        "nome" : "Scott Estrada",
+        "ruolo" : "Developer",
+        "foto" : "foto di Scott Estrada"
+    },
+    {
+        "nome" : "Barbara Ramos",
+        "ruolo" : "Graphic Designer",
+        "foto" : "foto di Barbara Ramos"
+    }
 
 ];
+
+console.log(newArray);
 
 
 
