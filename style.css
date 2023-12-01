@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #F5F5F1;
+}
+
 .container {
     text-align: center;
     margin: 0 auto;
@@ -22,13 +26,13 @@
 }
 
 .card {
-    background-color: red;
     width: calc((100% / 3) - 10px);
     height: 300px;
     margin: 5px;
+    background-color: white;
 }
 
-.card img {
+.profile-img {
     width: 100%;
     height: auto;
 }
@@ -39,7 +43,7 @@
     text-align: center;
 }
 
-.descrizione p {
+.descrizione span {
     display: block;
 }
 
