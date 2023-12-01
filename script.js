@@ -79,9 +79,17 @@ for (let i = 0; i < newArray.length; i++) {
     let ruoloMemberIesimo = memberIesimo.ruolo;
     console.log(nomeMemberIesimo + ", " + ruoloMemberIesimo);
 
-    descriptionMember.append(nomeMemberIesimo);
-    descriptionMember.append(ruoloMemberIesimo);
+
+    // STAMPARE le informazioni sul DOM
+    
+    nameMember.append(nomeMemberIesimo);
+    roleMember.append(ruoloMemberIesimo);
+
+    descriptionMember.append(nameMember);
+    descriptionMember.append(roleMember);
+
     newElement.append(descriptionMember);
+
     mainGrid.append(newElement);
    
 };
@@ -89,8 +97,3 @@ for (let i = 0; i < newArray.length; i++) {
 
 
 
-
-
-
-
-// STAMPARE le informazioni sul DOM
