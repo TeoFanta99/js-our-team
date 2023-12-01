@@ -49,12 +49,9 @@ const newArray = [
 
 ];
 
-console.log(newArray);
-
-
 
 // STAMPARE le informazioni in console
-
+console.log(newArray);
 
 
 // STAMPARE le informazioni sul DOM
