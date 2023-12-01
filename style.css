@@ -39,8 +39,13 @@
     text-align: center;
 }
 
+.descrizione p {
+    display: block;
+}
+
 .name {
     font-size: 20px;
+    display: block;
 }
 
 
