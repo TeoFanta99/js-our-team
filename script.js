@@ -54,4 +54,28 @@ const newArray = [
 console.log(newArray);
 
 
+// SELEZIONARE gli elementi del DOM
+const mainGrid = document.getElementById("grid");
+
+
+// FUNZIONE che permetta di generare elementi e di assegnare una classe
+function generaUnElemento (tagtype, classname) {
+    const element = document.createElement(tagtype);
+    element.classList.add(classname);
+    return element
+};
+
+
+// GENERARE gli elementi con ciclo for e con la funzione appena creata
+for (let i = 0; i < newArray.length; i++) {
+
+    const newElement = generaUnElemento("div", "card");
+
+    mainGrid.append(newElement);
+};
+
+
+
+
+
 // STAMPARE le informazioni sul DOM
