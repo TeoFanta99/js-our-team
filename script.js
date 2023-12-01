@@ -70,9 +70,24 @@ function generaUnElemento (tagtype, classname) {
 for (let i = 0; i < newArray.length; i++) {
 
     const newElement = generaUnElemento("div", "card");
+    const nameMember = generaUnElemento("p", "nome");
+    const roleMember = generaUnElemento("p", "ruolo");
+    const descriptionMember = generaUnElemento("div", "descrizione");
 
+    let memberIesimo = newArray[i];
+    let nomeMemberIesimo = memberIesimo.nome;
+    let ruoloMemberIesimo = memberIesimo.ruolo;
+    console.log(nomeMemberIesimo + ", " + ruoloMemberIesimo);
+
+    descriptionMember.append(nomeMemberIesimo);
+    descriptionMember.append(ruoloMemberIesimo);
+    newElement.append(descriptionMember);
     mainGrid.append(newElement);
+   
 };
+
+
+
 
 
 
