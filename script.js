@@ -12,51 +12,47 @@ Stampare le stesse informazioni su DOM sotto forma di stringhe
 */
 
 
-
 // GENERARE un array di oggetti con le informazioni dei membri del team con nome, ruolo, foto
 const newArray = [
 
     {
         "nome" : "Wayne Barnett",
         "ruolo" : "Founder & CEO",
-        "foto" : "foto di Wayne Barnett",
+        "foto" : "img/wayne-barnett-founder-ceo.jpg",
     },
     {
         "nome" : "Angela Caroll",
         "ruolo" : "Chief Editor",
-        "foto" : "foto di Angela Caroll"
+        "foto" : "img/angela-caroll-chief-editor.jpg"
     },
     {
         "nome" : "Walter Gordon",
         "ruolo" : "Office Manager",
-        "foto" : "foto di Walter Gordon"
+        "foto" : "img/walter-gordon-office-manager.jpg"
     },
     {
         "nome" : "Angela Lopez",
         "ruolo" : "Social Media Manager",
-        "foto" : "foto di Angela Lopez",
+        "foto" : "img/angela-lopez-social-media-manager.jpg",
     },
     {
         "nome" : "Scott Estrada",
         "ruolo" : "Developer",
-        "foto" : "foto di Scott Estrada"
+        "foto" : "img/scott-estrada-developer.jpg"
     },
     {
         "nome" : "Barbara Ramos",
         "ruolo" : "Graphic Designer",
-        "foto" : "foto di Barbara Ramos"
+        "foto" : "img/barbara-ramos-graphic-designer.jpg"
     }
 
 ];
 
-
 // STAMPARE le informazioni in console
 console.log(newArray);
 
-
 // SELEZIONARE gli elementi del DOM
 const mainGrid = document.getElementById("grid");
-
 
 // FUNZIONE che permetta di generare elementi e di assegnare una classe
 function generaUnElemento (tagtype, classname) {
@@ -65,35 +61,21 @@ function generaUnElemento (tagtype, classname) {
     return element
 };
 
-
 // GENERARE gli elementi con ciclo for e con la funzione appena creata
 for (let i = 0; i < newArray.length; i++) {
-
-    const newElement = generaUnElemento("div", "card");
-    const nameMember = generaUnElemento("p", "nome");
-    const roleMember = generaUnElemento("p", "ruolo");
-    const descriptionMember = generaUnElemento("div", "descrizione");
-
+ 
     let memberIesimo = newArray[i];
     let nomeMemberIesimo = memberIesimo.nome;
     let ruoloMemberIesimo = memberIesimo.ruolo;
-    console.log(nomeMemberIesimo + ", " + ruoloMemberIesimo);
+    let fotoMemberIesimo = memberIesimo.foto;
 
-
-    // STAMPARE le informazioni sul DOM
-    
-    nameMember.append(nomeMemberIesimo);
-    roleMember.append(ruoloMemberIesimo);
-
-    descriptionMember.append(nameMember);
-    descriptionMember.append(roleMember);
-
-    newElement.append(descriptionMember);
-
-    mainGrid.append(newElement);
+    mainGrid.innerHTML += 
+        `<div class="card">
+            <img class="profile-img" src="${fotoMemberIesimo}" alt="">
+            <div class="descrizione">
+                <span class="name">${nomeMemberIesimo}</span>
+                <span class="role">${ruoloMemberIesimo}</span>
+            </div>
+        </div>`
    
 };
-
-
-
-
