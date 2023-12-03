@@ -47,8 +47,6 @@ const newArray = [
     }
 
 ];
-
-// STAMPARE le informazioni in console
 console.log(newArray);
 
 // SELEZIONARE gli elementi del DOM
